@@ -86,7 +86,7 @@ gsap.from(".hero-content h1", {
 document.querySelectorAll(".about-block").forEach(block => {
     gsap.from(block.querySelector(".about-content"), {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 1.5,
       ease: "power3.out",
       scrollTrigger: {
@@ -100,7 +100,7 @@ document.querySelectorAll(".about-block").forEach(block => {
   
     gsap.from(block.querySelector(".about-image img"), {
       y: 50,
-      opacity: 0,
+      opacity: 1,
       duration: 1.5,
       delay: 0.3,
       ease: "power3.out",
@@ -125,7 +125,7 @@ gsap.from(".services", {
       toggleActions: "play none none reverse",
     },
     y: 100,
-    opacity: 0,
+    opacity: 1,
     duration: 1.2,
     ease: "power3.out"
   });
