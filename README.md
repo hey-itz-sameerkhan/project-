@@ -1,4 +1,8 @@
 # 🌐 YourTech Solutions — Premium One-Page Landing
+![Last Commit](https://img.shields.io/github/last-commit/hey-itz-sameerkhan/animation-project)
+![GitHub Stars](https://img.shields.io/github/stars/hey-itz-sameerkhan/animation-project?style=social)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
 **Transforming ideas into delightful digital experiences.**  
 A premium one-page landing built with **vanilla HTML, CSS, and JavaScript**.  
@@ -7,7 +11,8 @@ Features smooth scrolling, cinematic hero animations, and a performance-first de
 ---
 
 ## 🚀 Live Demo
-🔗 [View Live](https://technopage.netlify.app/#services)
+🔗 [View the Live Project<img width="1910" height="919" alt="Screenshot 2025-09-17 175902" src="https://github.com/user-attachments/assets/963c79aa-da62-460c-9ec8-a6c4d089396e" />
+](https://technopage.netlify.app/#services)
 
 ---
 
@@ -31,11 +36,6 @@ Features smooth scrolling, cinematic hero animations, and a performance-first de
 - **GSAP + ScrollTrigger** — GPU-friendly animations  
 - **Deployment:** Netlify  
 
----
-
-## 📸 Preview
-![Landing Page Preview](https://technopage.netlify.app/preview.png)  
-*(Optional: replace with your own screenshot)*
 
 ---
 
