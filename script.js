@@ -1,31 +1,33 @@
-// Locomotive + GSAP setup
+gsap.registerPlugin(ScrollTrigger);
+
 const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
+  el: document.querySelector("#main"),   // #main + data-scroll-container
   smooth: true,
-  // mobile support
+  multiplier: 1,
   smartphone: { smooth: true },
   tablet: { smooth: true }
 });
 
+// Scroll update sync
 locoScroll.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy("#main", {
   scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
   },
   getBoundingClientRect() {
     return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
   },
+  // mobile fix → agar transform nahi milta toh 'fixed'
   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
-// for mobile devices
-window.addEventListener("resize", function() {
-  locoScroll.update();
-});
-
+// Refresh on resize / load
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
+
 
 
 // Hero Section Load Animations - Premium Version
