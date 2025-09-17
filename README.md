@@ -6,7 +6,7 @@ Includes: Locomotive Scroll (smooth scrolling), GSAP + ScrollTrigger animations,
 ---
 
 ## Live Preview
-Add your deployed URL here (GitHub Pages / Vercel / Netlify)
+https://technopage.netlify.app/#services
 
 ---
 
