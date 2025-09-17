@@ -1,21 +1,17 @@
-gsap.registerPlugin(ScrollTrigger);
-history.scrollRestoration = "manual";
-
-// Initialize Locomotive Scroll
+// Locomotive + GSAP setup
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
-  smooth: true
+  smooth: true,
+  // mobile support
+  smartphone: { smooth: true },
+  tablet: { smooth: true }
 });
 
-// Update ScrollTrigger on Locomotive scroll
 locoScroll.on("scroll", ScrollTrigger.update);
 
-// ScrollTrigger proxy
 ScrollTrigger.scrollerProxy("#main", {
   scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
   },
   getBoundingClientRect() {
     return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
@@ -23,9 +19,14 @@ ScrollTrigger.scrollerProxy("#main", {
   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
-// Refresh ScrollTrigger after Locomotive updates
+// for mobile devices
+window.addEventListener("resize", function() {
+  locoScroll.update();
+});
+
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
+
 
 // Hero Section Load Animations - Premium Version
 
