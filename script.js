@@ -1,16 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),   // #main + data-scroll-container
+  el: document.querySelector("#main"),
   smooth: true,
   multiplier: 1,
-  smartphone: { smooth: true },
-  tablet: { smooth: true }
+  smartphone: { smooth: true }, // mobile smooth scroll enable
+  tablet: { smooth: true }      // tablet smooth scroll enable
 });
 
-// Scroll update sync
+// Locomotive scroll update → ScrollTrigger ko sync karna
 locoScroll.on("scroll", ScrollTrigger.update);
 
+// ScrollTrigger scrollerProxy setup
 ScrollTrigger.scrollerProxy("#main", {
   scrollTop(value) {
     return arguments.length
@@ -20,13 +21,13 @@ ScrollTrigger.scrollerProxy("#main", {
   getBoundingClientRect() {
     return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
   },
-  // mobile fix → agar transform nahi milta toh 'fixed'
   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
-// Refresh on resize / load
+// Resize / refresh par update
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
+
 
 
 
