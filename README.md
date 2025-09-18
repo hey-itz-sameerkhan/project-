@@ -1,8 +1,4 @@
 # 🌐 YourTech Solutions — Premium One-Page Landing
-![Last Commit](https://img.shields.io/github/last-commit/hey-itz-sameerkhan/animation-project)
-![GitHub Stars](https://img.shields.io/github/stars/hey-itz-sameerkhan/animation-project?style=social)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
 **Transforming ideas into delightful digital experiences.**  
 A premium one-page landing built with **vanilla HTML, CSS, and JavaScript**.  
